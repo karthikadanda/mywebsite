@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XPRINT Solutions - Ameerpet - T-Shirt, Vinyl & Eco-Solvent Printing</title>
+    <meta name="description" content="Professional printing services: T-shirt printing, vinyl printing, eco-solvent printing. Get instant quotes, track orders, and upload designs online.">
+    <meta name="keywords" content="t-shirt printing, vinyl printing, eco-solvent printing, custom printing, design services">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .service-card { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
+        .loading-spinner { border: 3px solid #f3f3f3; border-top: 3px solid #667eea; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <i class="fas fa-print text-3xl text-purple-600 mr-3"></i>
+                    <span class="text-2xl font-bold gradient-text">XPRINT Solutions - Ameerpet</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-purple-600 transition">Home</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-purple-600 transition">Services</a>
+                    <a href="#calculator" class="nav-link text-gray-700 hover:text-purple-600 transition">Quote Calculator</a>
+                    <a href="#gallery" class="nav-link text-gray-700 hover:text-purple-600 transition">Gallery</a>
+                    <a href="#order" class="nav-link text-gray-700 hover:text-purple-600 transition">Track Order</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600 transition">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-4 space-y-3">
+                <a href="#home" class="block text-gray-700 hover:text-purple-600">Home</a>
+                <a href="#services" class="block text-gray-700 hover:text-purple-600">Services</a>
+                <a href="#calculator" class="block text-gray-700 hover:text-purple-600">Quote Calculator</a>
+                <a href="#gallery" class="block text-gray-700 hover:text-purple-600">Gallery</a>
+                <a href="#order" class="block text-gray-700 hover:text-purple-600">Track Order</a>
+                <a href="#contact" class="block text-gray-700 hover:text-purple-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20 min-h-screen flex items-center hero-gradient">
+        <div class="container mx-auto px-6 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white fade-in">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6">Premium Printing Services</h1>
+                    <p class="text-xl mb-8 text-purple-100">Expert T-shirt, Vinyl & Eco-Solvent Printing with instant quotes and order tracking</p>
+                    <div class="flex flex-wrap gap-4">
+                        <button onclick="scrollToSection('calculator')" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition">
+                            <i class="fas fa-calculator mr-2"></i>Get Instant Quote
+                        </button>
+                        <button onclick="scrollToSection('gallery')" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition">
+                            <i class="fas fa-images mr-2"></i>View Our Work
+                        </button>
+                    </div>
+                    <div class="mt-12 grid grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold">5000+</div>
+                            <div class="text-purple-100">Happy Clients</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold">10+</div>
+                            <div class="text-purple-100">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold">24hr</div>
+                            <div class="text-purple-100">Quick Turnaround</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-white rounded-2xl shadow-2xl p-8 card-hover">
+                        <div class="aspect-video bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-tshirt text-6xl text-purple-600"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Our Printing Services</h2>
+                <p class="text-xl text-gray-600">Professional quality printing for all your needs</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- T-Shirt Printing -->
+                <div class="service-card rounded-2xl p-8 card-hover">
+                    <div class="bg-white rounded-full w-20 h-20 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-tshirt text-3xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">T-Shirt Printing</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Screen Printing</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>DTG Printing</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Heat Transfer</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Embroidery</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Custom Designs</li>
+                    </ul>
+                    <div class="mt-6 text-center">
+                        <span class="text-3xl font-bold text-purple-600">From ₹399</span>
+                        <span class="text-gray-600">/piece</span>
+                    </div>
+                </div>
+
+                <!-- Vinyl Printing -->
+                <div class="service-card rounded-2xl p-8 card-hover">
+                    <div class="bg-white rounded-full w-20 h-20 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-cut text-3xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Vinyl Printing</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Stickers & Decals</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Banner Printing</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Vehicle Wraps</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Window Graphics</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Floor Graphics</li>
+                    </ul>
+                    <div class="mt-6 text-center">
+                        <span class="text-3xl font-bold text-purple-600">From ₹799</span>
+                        <span class="text-gray-600">/sq ft</span>
+                    </div>
+                </div>
+
+                <!-- Eco-Solvent Printing -->
+                <div class="service-card rounded-2xl p-8 card-hover">
+                    <div class="bg-white rounded-full w-20 h-20 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-leaf text-3xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Eco-Solvent Printing</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Large Format Prints</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Outdoor Banners</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Canvas Prints</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Backlit Displays</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Eco-Friendly Inks</li>
+                    </ul>
+                    <div class="mt-6 text-center">
+                        <span class="text-3xl font-bold text-purple-600">From ₹1199</span>
+                        <span class="text-gray-600">/sq ft</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Calculator Section -->
+    <section id="calculator" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Instant Quote Calculator</h2>
+                <p class="text-xl text-gray-600">Get instant pricing for your printing needs</p>
+            </div>
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8">
+                <form id="quote-form">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Service Type</label>
+                            <select id="service-type" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-purple-500">
+                                <option value="">Select Service</option>
+                                <option value="tshirt">T-Shirt Printing</option>
+                                <option value="vinyl">Vinyl Printing</option>
+                                <option value="eco">Eco-Solvent Printing</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Quantity</label>
+                            <input type="number" id="quantity" min="1" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-purple-500" placeholder="Enter quantity">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Size/Dimensions</label>
+                            <input type="text" id="size" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-purple-500" placeholder="e.g., Medium, 24x36 inches">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Colors</label>
+                            <select id="colors" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-purple-500">
+                                <option value="1">1 Color</option>
+                                <option value="2">2 Colors</option>
+                                <option value="4">4 Colors (Full Color)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Urgency</label>
+                            <select id="urgency" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-purple-500">
+                                <option value="standard">Standard (5-7 days)</option>
+                                <option value="express">Express (2-3 days)</option>
+                                <option value="rush">Rush (24 hours)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Additional Options</label>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" id="design" class="mr-2">
+                                    <span>Design Service (+₹3999)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" id="delivery" class="mr-2">
+                                    <span>Home Delivery (+₹1599)</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full mt-6 bg-purple-600 text-white py-4 rounded-lg font-semibold hover:bg-purple-700 transition">
+                        <i class="fas fa-calculator mr-2"></i>Calculate Quote
+                    </button>
+                </form>
+                <div id="quote-result" class="hidden mt-8 p-6 bg-purple-50 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">Your Quote</h3>
+                    <div id="quote-details"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Our Work Gallery</h2>
+                <p class="text-xl text-gray-600">See our quality printing work</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg card-hover">
+                    <img src="https://picsum.photos/seed/tshirt1/400/300.jpg" alt="T-Shirt Design" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                        <div class="text-white">
+                            <h4 class="text-xl font-bold">Custom T-Shirts</h4>
+                            <p>Corporate event apparel</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg card-hover">
+                    <img src="https://picsum.photos/seed/vinyl1/400/300.jpg" alt="Vinyl Banner" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                        <div class="text-white">
+                            <h4 class="text-xl font-bold">Vinyl Banners</h4>
+                            <p>Outdoor advertising</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg card-hover">
+                    <img src="https://picsum.photos/seed/eco1/400/300.jpg" alt="Eco Print" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                        <div class="text-white">
+                            <h4 class="text-xl font-bold">Eco-Solvent Prints</h4>
+                            <p>Large format displays</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg card-hover">
+                    <img src="https://picsum.photos/seed/tshirt2/400/300.jpg" alt="T-Shirt Design" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                        <div class="text-white">
+                            <h4 class="text-xl font-bold">Sports Jerseys</h4>
+                            <p>Team uniforms</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg card-hover">
+                    <img src="https://picsum.photos/seed/vinyl2/400/300.jpg" alt="Vinyl Sticker" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                        <div class="text-white">
+                            <h4 class="text-xl font-bold">Custom Stickers</h4>
+                            <p>Brand promotion</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg card-hover">
+                    <img src="https://picsum.photos/seed/eco2/400/300.jpg" alt="Canvas Print" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                        <div class="text-white">
+                            <h4 class="text-xl font-bold">Canvas Art</h4>
+                            <p>Wall decorations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Tracking Section -->
+    <section id="order" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Track Your Order</h2>
+                <p class="text-xl text-gray-600">Monitor your order status in real-time</p>
+            </div>
+            <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-8">
+                <form id="tracking-form">
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-semibold mb-2">Order ID</label>
+                        <input type="text" id="order-id" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-purple-500" placeholder="Enter your order ID">
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-semibold mb-2">Email</label>
+                        <input type="email" id="order-email" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-purple-500" placeholder="Enter your email">
+                    </div>
+                    <button type="submit" class="w-full bg-purple-600 text-white py-4 rounded-lg font-semibold hover:bg-purple-700 transition">
+                        <i class="fas fa-search mr-2"></i>Track Order
+                    </button>
+                </form>
+                <div id="tracking-result" class="hidden mt-8">
+                    <h3 class="text-2xl font-bold mb-4">Order Status</h3>
+                    <div id="tracking-details"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- File Upload Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Upload Your Design</h2>
+                <p class="text-xl text-gray-600">Send us your design files for instant quote</p>
+            </div>
+            <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-8">
+                <div id="upload-area" class="border-2 border-dashed border-purple-300 rounded-lg p-12 text-center hover:border-purple-500 transition cursor-pointer">
+                    <i class="fas fa-cloud-upload-alt text-6xl text-purple-400 mb-4"></i>
+                    <p class="text-xl text-gray-700 mb-2">Drag & drop your design files here</p>
+                    <p class="text-gray-500 mb-4">or click to browse</p>
+                    <p class="text-sm text-gray-400">Supported formats: PDF, JPG, PNG, AI, EPS (Max 50MB)</p>
+                    <input type="file" id="file-input" class="hidden" multiple accept=".pdf,.jpg,.jpeg,.png,.ai,.eps">
+                </div>
+                <div id="upload-progress" class="hidden mt-6">
+                    <div class="bg-gray-200 rounded-full h-4">
+                        <div id="progress-bar" class="bg-purple-600 h-4 rounded-full transition-all duration-300" style="width: 0%"></div>
+                    </div>
+                    <p id="upload-status" class="text-center mt-2 text-gray-600"></p>
+                </div>
+                <div id="uploaded-files" class="hidden mt-6">
+                    <h4 class="font-semibold mb-3">Uploaded Files:</h4>
+                    <div id="files-list"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-xl text-gray-600">Trusted by businesses and individuals</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://picsum.photos/seed/user1/50/50.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Sarah Johnson</h4>
+                            <div class="text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Excellent quality and fast turnaround! Our company t-shirts look amazing and the team was very helpful with design suggestions."</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://picsum.photos/seed/user2/50/50.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Mike Chen</h4>
+                            <div class="text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Best printing service in town! The vinyl banners for our event were high quality and delivered on time. Highly recommend!"</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://picsum.photos/seed/user3/50/50.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Emily Davis</h4>
+                            <div class="text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Amazing eco-solvent prints for our art exhibition! The colors are vibrant and the quality exceeded our expectations."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-xl text-gray-600">Ready to start your printing project?</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <form id="contact-form">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-purple-500" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-purple-500" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Phone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-purple-500">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Service</label>
+                                <select id="service" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-purple-500">
+                                    <option value="">Select Service</option>
+                                    <option value="tshirt">T-Shirt Printing</option>
+                                    <option value="vinyl">Vinyl Printing</option>
+                                    <option value="eco">Eco-Solvent Printing</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <label class="block text-gray-700 font-semibold mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-purple-500" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full mt-6 bg-purple-600 text-white py-4 rounded-lg font-semibold hover:bg-purple-700 transition">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                    </form>
+                    <div id="contact-success" class="hidden mt-4 p-4 bg-green-100 text-green-700 rounded-lg">
+                        <i class="fas fa-check-circle mr-2"></i>Message sent successfully! We'll get back to you soon.
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-purple-50 rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-phone text-purple-600 text-xl w-8"></i>
+                                <span class="text-gray-700">075698 64565</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-purple-600 text-xl w-8"></i>
+                                <span class="text-gray-700">xprinthydsales@gmail.com</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-purple-600 text-xl w-8"></i>
+                                <span class="text-gray-700">210, 2nd Floor, X Road, Ameerpet, Hyderabad, Telangana 500016</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-clock text-purple-600 text-xl w-8"></i>
+                                <span class="text-gray-700">Mon-Sat: 9AM-7PM, Sun: 10AM-5PM</span>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="font-semibold mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-purple-700 transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-purple-700 transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-purple-700 transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-purple-700 transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-print text-2xl text-purple-400 mr-2"></i>
+                        <span class="text-xl font-bold">XPRINT Solutions - Ameerpet</span>
+                    </div>
+                    <p class="text-gray-400">Your trusted partner for all printing needs with quality service and fast turnaround.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">T-Shirt Printing</a></li>
+                        <li><a href="#" class="hover:text-white transition">Vinyl Printing</a></li>
+                        <li><a href="#" class="hover:text-white transition">Eco-Solvent Printing</a></li>
+                        <li><a href="#" class="hover:text-white transition">Design Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Portfolio</a></li>
+                        <li><a href="#" class="hover:text-white transition">Testimonials</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe for updates and special offers</p>
+                    <form id="newsletter-form" class="flex">
+                        <input type="email" placeholder="Your email" class="bg-gray-800 px-4 py-2 rounded-l-lg flex-1 focus:outline-none">
+                        <button type="submit" class="bg-purple-600 px-4 py-2 rounded-r-lg hover:bg-purple-700 transition">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 XPRINT Solutions - Ameerpet. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
