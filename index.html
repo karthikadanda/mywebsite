@@ -29,35 +29,38 @@
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
-        <div class="container mx-auto px-6 py-4">
+    <nav class="fixed top-0 w-full bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-2">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
-                    <i class="fas fa-print text-3xl text-purple-600 mr-3"></i>
-                    <span class="text-2xl font-bold gradient-text">XPRINT Solutions - Ameerpet</span>
+                    <img src="XPRINT.png" alt="XPRINT DTF Printing" class="h-48 w-48 mr-1 object-contain">
+                    <span class="text-2xl font-bold gradient-text">Solutions - Ameerpet</span>
                 </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link text-gray-700 hover:text-purple-600 transition">Home</a>
-                    <a href="#services" class="nav-link text-gray-700 hover:text-purple-600 transition">Services</a>
-                    <a href="#calculator" class="nav-link text-gray-700 hover:text-purple-600 transition">Quote Calculator</a>
-                    <a href="#gallery" class="nav-link text-gray-700 hover:text-purple-600 transition">Gallery</a>
-                    <a href="#order" class="nav-link text-gray-700 hover:text-purple-600 transition">Track Order</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600 transition">Contact</a>
+                <div class="hidden md:flex space-x-4">
+                    <a href="#home" class="nav-link bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition transform hover:scale-105 text-center min-w-[120px]">Home</a>
+                    <a href="#services" class="nav-link bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-full font-semibold hover:from-blue-700 hover:to-cyan-700 transition transform hover:scale-105 text-center min-w-[120px]">Services</a>
+                    <a href="#calculator" class="nav-link bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-full font-semibold hover:from-green-700 hover:to-emerald-700 transition transform hover:scale-105 text-center min-w-[120px]">Quote Calculator</a>
+                    <a href="#gallery" class="nav-link bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-full font-semibold hover:from-orange-700 hover:to-red-700 transition transform hover:scale-105 text-center min-w-[120px]">Gallery</a>
+                    <a href="#order" class="nav-link bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-indigo-700 hover:to-purple-700 transition transform hover:scale-105 text-center min-w-[120px]">Track Order</a>
+                    <a href="#contact" class="nav-link bg-gradient-to-r from-pink-600 to-rose-600 text-white px-6 py-3 rounded-full font-semibold hover:from-pink-700 hover:to-rose-700 transition transform hover:scale-105 text-center min-w-[120px]">Contact</a>
                 </div>
-                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
+                <div class="md:hidden flex items-center">
+                    <img src="XPRINT.png" alt="XPRINT DTF Printing" class="h-40 w-40 mr-2 object-contain">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-purple-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="px-6 py-4 space-y-3">
-                <a href="#home" class="block text-gray-700 hover:text-purple-600">Home</a>
-                <a href="#services" class="block text-gray-700 hover:text-purple-600">Services</a>
-                <a href="#calculator" class="block text-gray-700 hover:text-purple-600">Quote Calculator</a>
-                <a href="#gallery" class="block text-gray-700 hover:text-purple-600">Gallery</a>
-                <a href="#order" class="block text-gray-700 hover:text-purple-600">Track Order</a>
-                <a href="#contact" class="block text-gray-700 hover:text-purple-600">Contact</a>
+                <a href="#home" class="block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full font-semibold text-center hover:from-purple-700 hover:to-pink-700 transition transform hover:scale-105 w-full">Home</a>
+                <a href="#services" class="block bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-full font-semibold text-center hover:from-blue-700 hover:to-cyan-700 transition transform hover:scale-105 w-full">Services</a>
+                <a href="#calculator" class="block bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-full font-semibold text-center hover:from-green-700 hover:to-emerald-700 transition transform hover:scale-105 w-full">Quote Calculator</a>
+                <a href="#gallery" class="block bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-full font-semibold text-center hover:from-orange-700 hover:to-red-700 transition transform hover:scale-105 w-full">Gallery</a>
+                <a href="#order" class="block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold text-center hover:from-indigo-700 hover:to-purple-700 transition transform hover:scale-105 w-full">Track Order</a>
+                <a href="#contact" class="block bg-gradient-to-r from-pink-600 to-rose-600 text-white px-6 py-3 rounded-full font-semibold text-center hover:from-pink-700 hover:to-rose-700 transition transform hover:scale-105 w-full">Contact</a>
             </div>
         </div>
     </nav>
@@ -125,7 +128,7 @@
                         <li><i class="fas fa-check text-green-500 mr-2"></i>Custom Designs</li>
                     </ul>
                     <div class="mt-6 text-center">
-                        <span class="text-3xl font-bold text-purple-600">From ₹399</span>
+                        <span class="text-3xl font-bold text-purple-600">From 99</span>
                         <span class="text-gray-600">/piece</span>
                     </div>
                 </div>
@@ -219,11 +222,11 @@
                             <div class="space-y-2">
                                 <label class="flex items-center">
                                     <input type="checkbox" id="design" class="mr-2">
-                                    <span>Design Service (+₹3999)</span>
+                                    <span>Design Service (+199)</span>
                                 </label>
                                 <label class="flex items-center">
                                     <input type="checkbox" id="delivery" class="mr-2">
-                                    <span>Home Delivery (+₹1599)</span>
+                                    <span>Home Delivery (+199)</span>
                                 </label>
                             </div>
                         </div>
@@ -248,12 +251,12 @@
                 <p class="text-xl text-gray-600">See our quality printing work</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg card-hover">
-                    <img src="https://picsum.photos/seed/tshirt1/400/300.jpg" alt="T-Shirt Design" class="w-full h-64 object-cover">
+                <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg card-hover tshirt-set">
+                    <img src="https://picsum.photos/seed/tshirt-collection/400/300.jpg" alt="Custom T-Shirt Collection with Prints" class="w-full h-64 object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
                         <div class="text-white">
-                            <h4 class="text-xl font-bold">Custom T-Shirts</h4>
-                            <p>Corporate event apparel</p>
+                            <h4 class="text-xl font-bold">Custom T-Shirt Set</h4>
+                            <p>Multiple printed designs & colors</p>
                         </div>
                     </div>
                 </div>
@@ -320,8 +323,8 @@
                         <input type="text" id="order-id" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-purple-500" placeholder="Enter your order ID">
                     </div>
                     <div class="mb-6">
-                        <label class="block text-gray-700 font-semibold mb-2">Email</label>
-                        <input type="email" id="order-email" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-purple-500" placeholder="Enter your email">
+                        <label class="block text-gray-700 font-semibold mb-2">Phone Number</label>
+                        <input type="tel" id="order-phone" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-purple-500" placeholder="Enter your phone number">
                     </div>
                     <button type="submit" class="w-full bg-purple-600 text-white py-4 rounded-lg font-semibold hover:bg-purple-700 transition">
                         <i class="fas fa-search mr-2"></i>Track Order
@@ -343,13 +346,46 @@
                 <p class="text-xl text-gray-600">Send us your design files for instant quote</p>
             </div>
             <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-8">
-                <div id="upload-area" class="border-2 border-dashed border-purple-300 rounded-lg p-12 text-center hover:border-purple-500 transition cursor-pointer">
-                    <i class="fas fa-cloud-upload-alt text-6xl text-purple-400 mb-4"></i>
-                    <p class="text-xl text-gray-700 mb-2">Drag & drop your design files here</p>
-                    <p class="text-gray-500 mb-4">or click to browse</p>
-                    <p class="text-sm text-gray-400">Supported formats: PDF, JPG, PNG, AI, EPS (Max 50MB)</p>
-                    <input type="file" id="file-input" class="hidden" multiple accept=".pdf,.jpg,.jpeg,.png,.ai,.eps">
+                <!-- Sign In Form -->
+                <div id="signin-section" class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Sign In to Upload Files</h3>
+                    <form id="signin-form" class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Name</label>
+                            <input type="text" id="user-name" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-purple-500" placeholder="Enter your name" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Phone Number</label>
+                            <input type="tel" id="user-phone" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-purple-500" placeholder="Enter your phone number" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Email (Optional)</label>
+                            <input type="email" id="user-email" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-purple-500" placeholder="Enter your email">
+                        </div>
+                        <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition">
+                            <i class="fas fa-sign-in-alt mr-2"></i>Sign In & Continue
+                        </button>
+                    </form>
                 </div>
+                
+                <!-- Upload Area (Hidden until signed in) -->
+                <div id="upload-section" class="hidden">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-semibold">Upload Your Design Files</h3>
+                        <button id="signout-btn" class="text-red-500 hover:text-red-700">
+                            <i class="fas fa-sign-out-alt mr-1"></i>Sign Out
+                        </button>
+                    </div>
+                    <div id="user-info" class="bg-purple-50 rounded-lg p-3 mb-4">
+                        <p class="text-sm text-purple-700">Welcome, <span id="display-name"></span>!</p>
+                    </div>
+                    <div id="upload-area" class="border-2 border-dashed border-purple-300 rounded-lg p-12 text-center hover:border-purple-500 transition cursor-pointer">
+                        <i class="fas fa-cloud-upload-alt text-6xl text-purple-400 mb-4"></i>
+                        <p class="text-xl text-gray-700 mb-2">Drag & drop your design files here</p>
+                        <p class="text-gray-500 mb-4">or click to browse</p>
+                        <p class="text-sm text-gray-400">Supported formats: PDF, JPG, PNG, AI, EPS (Max 50MB)</p>
+                        <input type="file" id="file-input" class="hidden" multiple accept=".pdf,.jpg,.jpeg,.png,.ai,.eps">
+                    </div>
                 <div id="upload-progress" class="hidden mt-6">
                     <div class="bg-gray-200 rounded-full h-4">
                         <div id="progress-bar" class="bg-purple-600 h-4 rounded-full transition-all duration-300" style="width: 0%"></div>
@@ -371,55 +407,150 @@
                 <h2 class="text-4xl font-bold mb-4">What Our Clients Say</h2>
                 <p class="text-xl text-gray-600">Trusted by businesses and individuals</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <img src="https://picsum.photos/seed/user1/50/50.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Sarah Johnson</h4>
-                            <div class="text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+            
+            <!-- Scrollable Reviews Container -->
+            <div class="relative">
+                <div class="overflow-hidden">
+                    <div id="reviews-container" class="flex transition-transform duration-500 ease-in-out">
+                        <!-- Review 1 -->
+                        <div class="min-w-full md:min-w-0 md:w-1/3 px-4">
+                            <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                                <div class="flex items-center mb-4">
+                                    <img src="https://picsum.photos/seed/rahul/50/50.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                                    <div>
+                                        <h4 class="font-semibold">Rahul Kumar</h4>
+                                        <div class="text-yellow-400">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600">"XPRINT DTF Ameerpet is amazing! Got my custom t-shirts printed with DTF technology. The print quality is superb and colors are so vibrant. Best part is the quick delivery - got my order in just 2 days!"</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Review 2 -->
+                        <div class="min-w-full md:min-w-0 md:w-1/3 px-4">
+                            <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                                <div class="flex items-center mb-4">
+                                    <img src="https://picsum.photos/seed/priya/50/50.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                                    <div>
+                                        <h4 class="font-semibold">Priya Sharma</h4>
+                                        <div class="text-yellow-400">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600">"Outstanding service from XPRINT DTF! I needed urgent printing for my startup event and they delivered beyond expectations. The DTF prints on various fabrics look professional. Highly recommend for bulk orders!"</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Review 3 -->
+                        <div class="min-w-full md:min-w-0 md:w-1/3 px-4">
+                            <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                                <div class="flex items-center mb-4">
+                                    <img src="https://picsum.photos/seed/akash/50/50.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                                    <div>
+                                        <h4 class="font-semibold">Akash Reddy</h4>
+                                        <div class="text-yellow-400">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600">"XPRINT DTF Ameerpet is my go-to printing service! Their eco-solvent printing for my business banners is top-notch. Great pricing, excellent customer service, and they always deliver on time. The team is very helpful!"</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Review 4 -->
+                        <div class="min-w-full md:min-w-0 md:w-1/3 px-4">
+                            <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                                <div class="flex items-center mb-4">
+                                    <img src="https://picsum.photos/seed/sneha/50/50.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                                    <div>
+                                        <h4 class="font-semibold">Sneha Patel</h4>
+                                        <div class="text-yellow-400">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600">"Excellent DTF printing quality! I ordered custom t-shirts for my college fest and the results were fantastic. The colors are exactly as shown in the design. XPRINT DTF Ameerpet is the best in Hyderabad!"</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Review 5 -->
+                        <div class="min-w-full md:min-w-0 md:w-1/3 px-4">
+                            <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                                <div class="flex items-center mb-4">
+                                    <img src="https://picsum.photos/seed/vikram/50/50.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                                    <div>
+                                        <h4 class="font-semibold">Vikram Singh</h4>
+                                        <div class="text-yellow-400">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600">"Professional printing service with amazing attention to detail. The team at XPRINT DTF Ameerpet helped me with design suggestions and the final output exceeded my expectations. Will definitely order again!"</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Review 6 -->
+                        <div class="min-w-full md:min-w-0 md:w-1/3 px-4">
+                            <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                                <div class="flex items-center mb-4">
+                                    <img src="https://picsum.photos/seed/anjali/50/50.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                                    <div>
+                                        <h4 class="font-semibold">Anjali Rao</h4>
+                                        <div class="text-yellow-400">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600">"Best printing service in Ameerpet! I've tried multiple printers but XPRINT DTF stands out with their quality and service. The vinyl printing for my shop was perfect and the pricing is very reasonable."</p>
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600">"Excellent quality and fast turnaround! Our company t-shirts look amazing and the team was very helpful with design suggestions."</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <img src="https://picsum.photos/seed/user2/50/50.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Mike Chen</h4>
-                            <div class="text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600">"Best printing service in town! The vinyl banners for our event were high quality and delivered on time. Highly recommend!"</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <img src="https://picsum.photos/seed/user3/50/50.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Emily Davis</h4>
-                            <div class="text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600">"Amazing eco-solvent prints for our art exhibition! The colors are vibrant and the quality exceeded our expectations."</p>
-                </div>
+                
+                <!-- Navigation Arrows -->
+                <button id="prev-review" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition -ml-6 z-10">
+                    <i class="fas fa-chevron-left text-purple-600"></i>
+                </button>
+                <button id="next-review" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition -mr-6 z-10">
+                    <i class="fas fa-chevron-right text-purple-600"></i>
+                </button>
+            </div>
+            
+            <!-- Review Indicators -->
+            <div class="flex justify-center mt-8 space-x-2">
+                <button class="review-dot w-2 h-2 rounded-full bg-purple-600 transition" data-review="0"></button>
+                <button class="review-dot w-2 h-2 rounded-full bg-gray-300 transition" data-review="1"></button>
+                <button class="review-dot w-2 h-2 rounded-full bg-gray-300 transition" data-review="2"></button>
+                <button class="review-dot w-2 h-2 rounded-full bg-gray-300 transition" data-review="3"></button>
+                <button class="review-dot w-2 h-2 rounded-full bg-gray-300 transition" data-review="4"></button>
+                <button class="review-dot w-2 h-2 rounded-full bg-gray-300 transition" data-review="5"></button>
             </div>
         </div>
     </section>
@@ -488,7 +619,7 @@
                             </div>
                             <div class="flex items-center">
                                 <i class="fas fa-clock text-purple-600 text-xl w-8"></i>
-                                <span class="text-gray-700">Mon-Sat: 9AM-7PM, Sun: 10AM-5PM</span>
+                                <span class="text-gray-700">Mon-Sat: 10AM-9PM, Sun: 10AM-7PM</span>
                             </div>
                         </div>
                         <div class="mt-8">

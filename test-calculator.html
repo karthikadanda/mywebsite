@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator Test</title>
+</head>
+<body>
+    <form id="quote-form">
+        <select id="service-type">
+            <option value="tshirt">T-Shirt Printing</option>
+        </select>
+        <input type="number" id="quantity" value="10">
+        <button type="submit">Calculate</button>
+    </form>
+    <div id="quote-result" style="display: none;">
+        <div id="quote-details"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded');
+            
+            const quoteForm = document.getElementById('quote-form');
+            console.log('Quote form found:', !!quoteForm);
+            
+            if (quoteForm) {
+                quoteForm.addEventListener('submit', function(e) {
+                    console.log('Form submitted!');
+                    e.preventDefault();
+                    
+                    const serviceType = document.getElementById('service-type').value;
+                    const quantity = parseInt(document.getElementById('quantity').value);
+                    
+                    console.log('Inputs:', { serviceType, quantity });
+                    
+                    // Simple calculation
+                    const basePrice = 99;
+                    const subtotal = basePrice * quantity;
+                    const total = subtotal + (subtotal * 0.18);
+                    
+                    const quoteResult = document.getElementById('quote-result');
+                    const quoteDetails = document.getElementById('quote-details');
+                    
+                    quoteDetails.innerHTML = `
+                        <p>Total: ${total.toFixed(2)}</p>
+                    `;
+                    
+                    quoteResult.style.display = 'block';
+                    console.log('Quote displayed');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
